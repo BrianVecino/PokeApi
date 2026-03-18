@@ -1,0 +1,19 @@
+<article class="card">
+        <h1 class="header__card">{{pokemon()?.name}}</h1>
+        <img class="img__card" [src]="pokemon()?.image">
+        <div class="wrap__badge">
+        @for (type of pokemon()?.types; track type){
+        <span class="{{ 'badge ' + type }}">
+        <img 
+        [src]="'https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/' + type + '.svg'"
+        [alt]="type"
+        width="14"
+        height="14"
+        />
+        {{type}}</span>
+        
+        }
+        </div>
+        <button class="button__card" [routerLink]="['/pokemon', pokemon()?.id]">Ver Detalles</button>
+</article>
+

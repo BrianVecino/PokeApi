@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
+
+:root {
+    /* Sistema de 4px */
+    /* ESPACIADO */
+--space:4px;  
+--space-s:8px;   
+--space-sa:12px;
+--space-sas:16px;
+--space-sass:24px;
+--space-sassr:32px;
+--space-sassrs:48px;
+--space-sassrsr:64px;
+
+    /* COLORES */
+    --bg:#f8f7f2;
+    --bg-card:#e2e0d8;
+    --txt-first:#1e293b;
+    --nav-hero-footer: #0f1f3d;
+    --cta:#f5c518;
+    --bordes:#0f1f3d;
+    /* TAMAÑO TEXTO */
+    --h1:32px / 400;
+    --h2:24px / 400;
+    --h3: 18px / 500;
+    --text:16px / 400;
+    /* FUENTES DE TEXTO */
+    --font-display: 'DM Serif Display', serif;
+    --font-body:    'DM Sans', sans-serif;
+
+}
+
+* , *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 var(--space);
+    margin: var(--space-s);
+    padding: var(--space) 5px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #1e293b;
+    font-family: var(--font-body);
+    font-size: var(--space-sas);
+    font-weight: 400;
+    border: 1px solid #333;
+    border-radius: var(--space-sassr);
+}
+
+.badge.fire     { background: #f08030; }
+.badge.water    { background: #6890f0; }
+.badge.grass { background: #78c850; }
+.badge.electric { background: #f8d030; color: #333; }
+.badge.poison   { background: #aa5baa; }
+.badge.psychic  { background: #f85888; }
+.badge.bug      { background: #a8b820; }
+.badge.normal   { background: #a8a878; }
+.badge.flying   { background: #98d8d8; color: #333; }
+.badge.ice      { background: #98d8d8; color: #333; }
+.badge.dragon   { background: #7038f8; }
+.badge.rock     { background: #b8a038; }
+.badge.ground   { background: #e0c068; color: #333; }
+.badge.steel    { background: #b8b8d0; color: #333; }
+.badge.fairy    { background: #f0b6bc; color: #333; }
+.badge.fighting { background: #c03028; }
+.badge.ghost    { background: #705898; }
+
+.button__card {
+    display: block;
+    margin-top:auto;
+    padding: var(--space-s);
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--cta);
+    font-family: var(--font-body);
+    font-size: var(--space-sas);
+    font-weight: 500;
+    border: 1px solid var(--nav-hero-footer);
+    border-radius: var(--space-s);
+    transition: background-color, .3s ease;
+}
+
+.button__card:hover {
+    background-color: #c9a216;
+}

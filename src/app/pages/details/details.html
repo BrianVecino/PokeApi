@@ -1,0 +1,34 @@
+<section class="section__details">
+    <article class="details__card">
+        <div class="wrapper__card">
+            <h1 class="detail__title">{{pokemon()?.name}}</h1>
+            <img class="detail__img" [src]="pokemon()?.image">
+            <span class="detail__height">height: {{pokemon()?.height}}</span>
+            <span class="detail__weight">weight: {{pokemon()?.weight}}</span>
+        @for (type of pokemon()?.types; track type) {
+            <span class="{{ 'badge ' + type }} bad">
+            <img 
+            [src]="'https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/' + type + '.svg'"
+            [alt]="type"
+            width="14"
+            height="14"
+            />
+            {{type}}</span>
+        }
+        </div>
+        <div class="wrapper__stats">
+            @for (stat of pokemon()?.stats; track stat) {
+            <div class="stat-row">
+                    <h2 class="detail__stat-name">{{stat.name}} </h2>
+                        <div class="stat__bar">
+                            <div class="stat__bar-fill"
+                            [style.width.%]="(stat.value / 255) * 100">
+                            </div>
+                        </div>
+                        <span class="detail__base-name">{{stat.value}}</span>
+            </div>
+            }
+        </div>
+    </article>
+    <button class="button__card back" (click)="goBack()">Volver</button>
+</section>
