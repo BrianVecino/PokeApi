@@ -7,7 +7,6 @@ para explorar y buscar información de Pokémon.
 - Listado de Pokémon con paginación
 - Búsqueda por nombre
 - Vista de detalle con stats y tipos
-- (agregá lo que tenga tu app)
 
 ## Tecnologías
 - Angular 21
